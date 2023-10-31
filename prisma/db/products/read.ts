@@ -1,10 +1,10 @@
-import prisma from "../prismadb";
+import prisma from "@/prisma/prismadb";
 
 // type
 import { FetchResult } from "@/interfaces";
 
 //--------------------------------------
-// Read
+// Get All
 //--------------------------------------
 export const getAllProducts = async (page: number = 1): Promise<FetchResult> => {    
     const productsInPage: number = 1;

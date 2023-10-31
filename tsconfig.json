@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    // "baseUrl": "./",
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -19,8 +20,15 @@
       }
     ],
     "paths": {
+      "@": ["./"],
       "@/*": ["./*"],
-      "@/components": ["./app/components/*"]
+      // custom paths
+      "@myDb/": ["./prisma/db"],
+      "@myDb/*": ["./prisma/db/*"],
+      "@myLib": ["./app/lib"],
+      "@myLib/*": ["./app/lib/*"],
+      "@components": ["./app/components"],
+      "@components/*": ["./app/components/*"]
     },
     // customizations
     "allowUnreachableCode": false,

@@ -1,6 +1,6 @@
 // => localhost:3000/api/products
 
-import { getAllProducts } from '@/prisma/db/products';
+import { getAllProducts } from '@myDb/products';
 import { NextResponse } from 'next/server';
 
 // type

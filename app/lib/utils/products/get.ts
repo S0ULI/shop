@@ -12,7 +12,7 @@ export const getAllProducts = async (page: number | null): Promise<FetchResult> 
   if (!res.ok) {
     throw new Error("can't fetch data from the api - fetching failed");
   }
-  const results: FetchResult = await res.json();
+  const results = await res.json() as FetchResult
 
   return results
 };

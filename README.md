@@ -2,7 +2,7 @@
 
 This project uses [`React`](https://react.dev/) [`NextJS`](https://nextjs.org) For Front and Back-End Development, [`Tailwind`](https://tailwindcss.com/) For Styling And [`Prisma`](https://www.prisma.io) [`Mongodb`](https://www.mongodb.com/to) For  Database Management & Database.
 
-## installing modules
+## Using The App
 
 Install The Dependencies
 

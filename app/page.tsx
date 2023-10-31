@@ -1,5 +1,5 @@
-import Cards from "./components/Cards/Cards";
-import { getAllProducts } from "./lib/products-util"
+import Cards from "@components/Cards/Cards";
+import { getAllProducts } from "@myLib/utils/products"
 
 // type
 interface HomeProps {
