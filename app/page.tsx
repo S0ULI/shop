@@ -13,12 +13,14 @@ export default async function Home({ searchParams }: HomeProps) {
   if(pageParam){
     page = +pageParam
   }
-  const { data } = await getAllProducts(page)
+  const { products, totalPages } = await getAllProducts(page)
   
   return (
     <main>
       <h1>home page</h1>
-      <Cards data={data} />
+      <Cards data={products} />
+      <span>currentPage = {page}</span> 
+      <span> totalPages = {totalPages}</span>
     </main>
   )
 }

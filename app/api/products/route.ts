@@ -12,8 +12,8 @@ export const GET = async (req: Request) => {
     page = +pageParam;
   }
   try {
-    const products: Product[] = await getAllProducts(page);
-    return NextResponse.json(products);
+    const { products, totalPages }: { products: Product[], totalPages: number } = await getAllProducts(page);
+    return NextResponse.json({products, totalPages});
   } catch (err) {
     return NextResponse.json(
       { message: 'cant get all products - api failed', Error: err },
