@@ -1,17 +1,21 @@
+// ----------------- Custom ------------------
 import Cards from "@components/Cards/Cards";
 import { getAllProducts } from "@myLib/utils/products"
 
-// type
-interface HomeProps {
+// ------------------ Type -------------------
+interface HomePropsProps {
   searchParams: {
     page: string | undefined
   }
 }
 
+// ---------- Route Segment Config -----------
+export const revalidate = 1;
+
 // -------------------------------------------
-// function
+// ---------------- Component ----------------
 // -------------------------------------------
-export default async function Home({ searchParams }: HomeProps) {
+export default async function Home({ searchParams }: HomePropsProps) {
   const pageParam: string | undefined = searchParams.page;
   let page: number = 1
   if(pageParam){

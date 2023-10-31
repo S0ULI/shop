@@ -1,13 +1,14 @@
-// => localhost:3000/api/products
+// === http://localhost:3000//api/products ===
 
-import { getAllProducts } from '@myDb/products';
+// ------------------- Lib -------------------
 import { NextResponse } from 'next/server';
-
-// type
+// ----------------- Custom ------------------
+import { getAllProducts } from '@myDb/products';
+// ------------------ Type -------------------
 import { FetchResult } from '@/interfaces';
 
 // -------------------------------------------
-// function
+// ------------------- GET -------------------
 // -------------------------------------------
 export const GET = async (req: Request) => {
   const { searchParams } = new URL(req.url);

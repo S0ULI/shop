@@ -1,6 +1,11 @@
-import { NextFontWithVariable } from 'next/dist/compiled/@next/font';
+// ------------------- Lib -------------------
 import localFont from 'next/font/local';
+// ------------------ Type -------------------
+import { NextFontWithVariable } from 'next/dist/compiled/@next/font';
 
+// -------------------------------------------
+// ------------------ Font -------------------
+// -------------------------------------------
 const poppins: NextFontWithVariable = localFont({
   src: [
     {

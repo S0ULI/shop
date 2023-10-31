@@ -1,10 +1,12 @@
+// ----------------- Custom ------------------
+import Card from './Card'
+// ------------------ Type -------------------
 import { Product } from '@prisma/client'
 
-import React from 'react'
 
-import Card from './Card'
-
-// -------------------------------------
+// -------------------------------------------
+// ---------------- Component ----------------
+// -------------------------------------------
 const Cards = ({data}: { data: Product[] }) => {
   return (
     <div>

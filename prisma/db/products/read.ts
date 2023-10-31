@@ -1,13 +1,13 @@
+// ------------------- Lib -------------------
 import prisma from "@/prisma/prismadb";
-
-// type
+// ------------------ Type -------------------
 import { FetchResult } from "@/interfaces";
 
 //--------------------------------------
-// Get All
+// -------------- GET All --------------
 //--------------------------------------
 export const getAllProducts = async (page: number = 1): Promise<FetchResult> => {    
-    const productsInPage: number = 1;
+    const productsInPage: number = 10;
 
     const data = await prisma.product.findMany({
         skip: (productsInPage * (page - 1)),
