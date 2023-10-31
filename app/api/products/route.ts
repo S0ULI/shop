@@ -1,9 +1,14 @@
 // => localhost:3000/api/products
 
 import { getAllProducts } from '@/prisma/db/products';
-import { Product } from '@prisma/client';
 import { NextResponse } from 'next/server';
 
+// type
+import { FetchResult } from '@/interfaces';
+
+// -------------------------------------------
+// function
+// -------------------------------------------
 export const GET = async (req: Request) => {
   const { searchParams } = new URL(req.url);
   const pageParam = searchParams.get('page');
@@ -12,8 +17,8 @@ export const GET = async (req: Request) => {
     page = +pageParam;
   }
   try {
-    const { products, totalPages }: { products: Product[], totalPages: number } = await getAllProducts(page);
-    return NextResponse.json({products, totalPages});
+    const { data, totalPages }: FetchResult = await getAllProducts(page);
+    return NextResponse.json({data, totalPages});
   } catch (err) {
     return NextResponse.json(
       { message: 'cant get all products - api failed', Error: err },

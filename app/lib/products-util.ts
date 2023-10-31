@@ -1,14 +1,18 @@
-import { Product } from "@prisma/client";
+// type
+import { FetchResult } from "@/interfaces";
 
 const domain = process.env.NEXT_PUBLIC_DOMAIN;
 
-export const getAllProducts = async (page: number | null): Promise<{ products: Product[], totalPages: number }> => {
+// -------------------------------------------
+// function
+// -------------------------------------------
+export const getAllProducts = async (page: number | null): Promise<FetchResult> => {
   // change the revalidation for deployment
-  const results = await fetch(`${domain}/api/products${page ? '?page=' + page : ''}`, {next: { revalidate: 1 }});
-  if (!results.ok) {
+  const res = await fetch(`${domain}/api/products${page ? '?page=' + page : ''}`, {next: { revalidate: 1 }});
+  if (!res.ok) {
     throw new Error("can't fetch data from the api - fetching failed");
   }
-  const data: { products: Product[], totalPages: number } = await results.json();
+  const results: FetchResult = await res.json();
 
-  return data
+  return results
 };
