@@ -1,3 +1,5 @@
+import { Product } from "@prisma/client";
+
 const domain = process.env.NEXT_PUBLIC_DOMAIN;
 
 export const getAllProducts = async (page: number | null): Promise<{ data: Product[] }> => {

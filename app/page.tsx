@@ -1,3 +1,4 @@
+import Cards from "./components/Cards/Cards";
 import { getAllProducts } from "./lib/products-util"
 
 interface HomeProps {
@@ -13,11 +14,11 @@ export default async function Home({ searchParams }: HomeProps) {
     page = +pageParam
   }
   const { data } = await getAllProducts(page)
-  console.log(data);
   
   return (
     <main>
       <h1>home page</h1>
+      <Cards data={data} />
     </main>
   )
 }

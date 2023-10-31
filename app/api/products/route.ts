@@ -1,6 +1,7 @@
 // => localhost:3000/api/products
 
 import { getAllProducts } from '@/prisma/db/products';
+import { Product } from '@prisma/client';
 import { NextResponse } from 'next/server';
 
 export const GET = async (req: Request) => {
