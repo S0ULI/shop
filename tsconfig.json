@@ -25,6 +25,8 @@
       // custom paths
       "@myDb/": ["./prisma/db"],
       "@myDb/*": ["./prisma/db/*"],
+      "@template": ["./template"],
+      "@template/*": ["./template/*"],
       "@myLib": ["./app/lib"],
       "@myLib/*": ["./app/lib/*"],
       "@components": ["./app/components"],

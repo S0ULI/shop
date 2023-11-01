@@ -7,7 +7,7 @@ import { FetchResult } from "@/interfaces";
 // -------------- GET All --------------
 //--------------------------------------
 export const getAllProducts = async (page: number = 1): Promise<FetchResult> => {    
-    const productsInPage: number = 10;
+    const productsInPage: number = 1;
 
     const data = await prisma.product.findMany({
         skip: (productsInPage * (page - 1)),
