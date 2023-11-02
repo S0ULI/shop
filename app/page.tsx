@@ -11,6 +11,11 @@ interface HomePropsProps {
 
 // ---------- Route Segment Config -----------
 export const revalidate = 1;
+// export const dynamic = 'auto'
+// export const dynamicParams = true
+// export const fetchCache = 'auto'
+// export const runtime = 'nodejs'
+// export const preferredRegion = 'auto'
 
 // -------------------------------------------
 // ---------------- Component ----------------
